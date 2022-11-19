@@ -14,6 +14,8 @@ import {
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Settings from '../screens/Settings'
+import Movies from '../screens/Movies'
+import Recommend from '../screens/Recommend'
 
 const Tab = createBottomTabNavigator();
 
@@ -44,6 +46,68 @@ export default function RouteTabs() {
         
       })}
     >
+        <Tab.Screen
+        name="Movies"
+        component={Movies}
+        options={{ headerShown: true,
+          headerTitle: 'Dashboard',
+          headerStyle: {
+            backgroundColor: '#013A71',
+          },
+          headerTintColor: '#fff',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          },
+          style: { 
+            backgroundColor: '#fff',
+            shadowColor: 'transparent',
+            shadowRadius: 0,
+            shadowOffset: {
+                height: 0,
+            }
+           },
+          
+          headerRight: () => (
+            <TouchableOpacity
+              onPress={() => navigation.navigate('Home')}
+              
+            > 
+              <Text >Exit</Text>
+            </TouchableOpacity>
+          ),
+        }} 
+      />
+      <Tab.Screen
+        name="Recommend"
+        component={Recommend}
+        options={{ headerShown: true,
+          headerTitle: 'Dashboard',
+          headerStyle: {
+            backgroundColor: '#013A71',
+          },
+          headerTintColor: '#fff',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          },
+          style: { 
+            backgroundColor: '#fff',
+            shadowColor: 'transparent',
+            shadowRadius: 0,
+            shadowOffset: {
+                height: 0,
+            }
+           },
+          
+          headerRight: () => (
+            <TouchableOpacity
+              onPress={() => navigation.navigate('Home')}
+              
+            > 
+              <Text >Exit</Text>
+            </TouchableOpacity>
+          ),
+        }} 
+      />
       <Tab.Screen
         name="Settings"
         component={Settings}
@@ -75,6 +139,7 @@ export default function RouteTabs() {
           ),
         }} 
       />
+
     </Tab.Navigator>
   );
 }
