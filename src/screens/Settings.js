@@ -10,12 +10,17 @@ import {
 
   } from 'react-native';
 
-import RouteTabs from '../routes/RouteTabs';
+import Styles from '../styles/patternStyles/Styles'
 
-export default function Dashboard() {
+
+
+export default function Settings() {
   
   return (
-    <RouteTabs/>
+    <View style={Styles.containerPattern}>
+        <Text>Settings</Text>
+        
+    </View>
   );
 }
 
