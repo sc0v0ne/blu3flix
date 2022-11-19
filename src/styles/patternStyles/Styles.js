@@ -15,6 +15,20 @@ const styles = StyleSheet.create({
     },
     mediumButtonText: {
     },
+    smallButton: {
+        alignItems: "center",
+        backgroundColor: "#DDD1DD",
+        padding: 10,
+    },
+    smallButtonText: {
+    },
+    largeButton: {
+        alignItems: "center",
+        backgroundColor: "#DDD1DD",
+        padding: 10,
+    },
+    largeButtonText: {
+    },
     
 })
 

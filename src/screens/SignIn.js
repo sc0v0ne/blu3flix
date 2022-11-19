@@ -8,13 +8,16 @@ import {
     ScrollView,
     Alert
 
-} from 'react-native';
+  } from 'react-native';
 
-export default function SignIn() {
+import Styles from '../styles/patternStyles/Styles'
+
+export default function SignIn({navigation}) {
   
   return (
-    <View>
-        <Text>Login</Text>
+    <View style={Styles.containerPattern}>
+        <Text>Sign In</Text>
+        
     </View>
   );
 }

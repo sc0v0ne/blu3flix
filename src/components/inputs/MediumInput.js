@@ -12,18 +12,14 @@ import {
 import Styles from '../../styles/patternStyles/Styles';
 
 
-export default function LargeButton(props) {
+export default function MediumInput(props) {
   
   return (
     <View>
-        <TouchableOpacity
-            style={Styles.largeButton}
-            onPress={props.buttonPress}
+        <TextInput
+        
         >
-        <Text style={Styles.largeButtonText}>
-            {props.buttonText}
-        </Text>
-      </TouchableOpacity>
+        </TextInput>
     </View>
   );
 }

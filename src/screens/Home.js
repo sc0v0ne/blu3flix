@@ -13,18 +13,18 @@ import {
 import Styles from '../styles/patternStyles/Styles'
 import MediumButton from '../components/buttons/MediumButton';
 
-export default function Home() {
+export default function Home({navigation}) {
   
   return (
     <View style={Styles.containerPattern}>
         <Text>Home</Text>
         <MediumButton
           buttonText = 'Sign In'
-
+          buttonPress = {() => navigation.navigate('SignUp')}
         />
         <MediumButton
           buttonText = 'Sign Up'
-
+          buttonPress = {() => navigation.navigate('SignIn')}
         />
     </View>
   );
