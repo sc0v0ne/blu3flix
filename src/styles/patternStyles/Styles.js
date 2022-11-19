@@ -14,6 +14,8 @@ const styles = StyleSheet.create({
         padding: 10,
     },
     mediumButtonText: {
+        fontSize: 10,
+        fontWeight: "bold"
     },
     smallButton: {
         alignItems: "center",
@@ -21,6 +23,8 @@ const styles = StyleSheet.create({
         padding: 10,
     },
     smallButtonText: {
+        fontSize: 10,
+        fontWeight: "bold"
     },
     largeButton: {
         alignItems: "center",
@@ -28,7 +32,15 @@ const styles = StyleSheet.create({
         padding: 10,
     },
     largeButtonText: {
+        fontSize: 10,
+        fontWeight: "bold"
     },
+    mediumInput:{
+        height: 40,
+        margin: 12,
+        borderWidth: 1,
+        padding: 10,
+    }
     
 })
 

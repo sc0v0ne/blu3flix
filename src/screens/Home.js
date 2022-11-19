@@ -20,11 +20,11 @@ export default function Home({navigation}) {
         <Text>Home</Text>
         <MediumButton
           buttonText = 'Sign In'
-          buttonPress = {() => navigation.navigate('SignUp')}
+          buttonPress = {() => navigation.navigate('SignIn')}
         />
         <MediumButton
           buttonText = 'Sign Up'
-          buttonPress = {() => navigation.navigate('SignIn')}
+          buttonPress = {() => navigation.navigate('SignUp')}
         />
     </View>
   );

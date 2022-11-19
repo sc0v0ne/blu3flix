@@ -17,9 +17,12 @@ export default function MediumInput(props) {
   return (
     <View>
         <TextInput
-        
-        >
-        </TextInput>
+            style = {Styles.mediumInput}
+            onChangeText={props.inputOnChange}
+            value = {props.inputValue}
+            placeholder ={props.inputPlaceholder}
+            keyboardType = {props.inputKeyboard}
+        />
     </View>
   );
 }
