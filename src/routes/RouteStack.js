@@ -40,9 +40,9 @@ export default function RouteStack() {
                 component={SignUp}
                 options={{ title: 'BLUEFLIX',
                 headerStyle: {
-                    backgroundColor: '#1ABEE2',
+                    backgroundColor: '#1C1B1B',
                   },
-                  headerTintColor: '#fff',
+                  headerTintColor: '#1ABEE2',
                   headerTitleStyle: {
                     fontWeight: 'bold',
                   },
@@ -55,9 +55,9 @@ export default function RouteStack() {
                 component={Dashboard}
                 options={{ title: 'BLUEFLIX',
                 headerStyle: {
-                    backgroundColor: '#1ABEE2',
+                    backgroundColor: '#1C1B1B',
                   },
-                  headerTintColor: '#fff',
+                  headerTintColor: '#1ABEE2',
                   headerTitleStyle: {
                     fontWeight: 'bold',
                   },

@@ -40,6 +40,7 @@ export default function SignUp({navigation}) {
             buttonText = 'Create Account'
             buttonPress = {() => navigation.navigate('Home')}
             styleMediumButton={Styles.inputMethodButton}
+            styleMediumText={Styles.mediumButtonTextNormal}
           />
           <Text style={Styles.inputMethodText}>Do You Have An Account ? Sign In</Text>         
         </View>

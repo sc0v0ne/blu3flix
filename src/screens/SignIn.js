@@ -42,6 +42,7 @@ export default function SignIn({navigation}) {
             buttonText = 'Sign In'
             buttonPress = {() => navigation.navigate('Dashboard')}
             styleMediumButton={Styles.inputMethodButton}
+            styleMediumText={Styles.mediumButtonTextNormal}
           />
           <Text style={Styles.inputMethodText}>Not A Member ? Register Now</Text>         
         </View>

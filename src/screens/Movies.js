@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import {
     View,
+    Text,
+    ScrollView,
 
   } from 'react-native';
 
@@ -8,6 +10,7 @@ import Itens from "../components/itens/Item";
 import { movieDBKeyAPI } from '../configs/MovieDBkeyAPI';
 import ListFlat from '../components/flatlist/ListFlat';
 
+import Styles from '../styles/patternStyles/Styles';
 
 export default function Movies() {
     
@@ -30,13 +33,23 @@ export default function Movies() {
     );
 
   return (
-    <View>
-      <ListFlat
-        flatListData={movies}
-        flatListRenderItem={renderItem}
-        flatListKeyExtractor={item => item.id}
-        flatListHorizontal={true}
-      />      
+    <View style={Styles.containerPattern}>
+      <ScrollView>
+        <Text style={Styles.inputMethodTitle}>Popular Movies</Text>
+        <ListFlat
+          flatListData={movies}
+          flatListRenderItem={renderItem}
+          flatListKeyExtractor={item => item.id}
+          flatListHorizontal={true}
+        /> 
+         <Text style={Styles.inputMethodTitle}>Popular Movies 2</Text>
+        <ListFlat
+          flatListData={movies}
+          flatListRenderItem={renderItem}
+          flatListKeyExtractor={item => item.id}
+          flatListHorizontal={true}
+        /> 
+      </ScrollView>    
     </View>
   );
 }
