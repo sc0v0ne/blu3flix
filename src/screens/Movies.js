@@ -1,19 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import {
-    Text,
     View,
-    TextInput,
-    TouchableOpacity,
-    Image,
-    ScrollView,
-    Alert,
-    FlatList
 
   } from 'react-native';
 
 import Itens from "../components/itens/Item";
 import { movieDBKeyAPI } from '../configs/MovieDBkeyAPI';
-
+import ListFlat from '../components/flatlist/ListFlat';
 
 
 export default function Movies() {
@@ -38,12 +31,12 @@ export default function Movies() {
 
   return (
     <View>
-      <FlatList
-        data={movies}
-        renderItem={renderItem}
-        keyExtractor={item => item.id}
-        horizontal={true}
-      />
+      <ListFlat
+        flatListData={movies}
+        flatListRenderItem={renderItem}
+        flatListKeyExtractor={item => item.id}
+        flatListHorizontal={true}
+      />      
     </View>
   );
 }

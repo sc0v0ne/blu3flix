@@ -23,7 +23,6 @@ export default function Item({title, poster_path, link, preview, release_date}) 
     return (
         <View style={Styles.containerDouble}>    
             <Card style={Styles.modalCard}>
-
                 <Card.Content>
                     <Text style={Styles.titleModalAnime}>{title}</Text>
                     <Text>{release_date}</Text>
