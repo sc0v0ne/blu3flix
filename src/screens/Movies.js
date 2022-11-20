@@ -14,6 +14,8 @@ import {
 import Itens from "../components/itens/Item";
 import { movieDBKeyAPI } from '../configs/MovieDBkeyAPI';
 
+
+
 export default function Movies() {
     
   

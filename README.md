@@ -135,3 +135,9 @@ import { signOut } from 'firebase/auth';
 
 
 [apimovie](https://developers.themoviedb.org/3/getting-started/introduction)
+
+-----
+
+### Carrousel
+
+[Carousel](https://github.com/meliorence/react-native-snap-carousel#layouts-and-custom-interpolations)

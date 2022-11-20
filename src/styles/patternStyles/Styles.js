@@ -6,7 +6,10 @@ const styles = StyleSheet.create({
     containerPattern:{
         flex: 1,
         margin: 40,
-
+    },
+    containerDouble:{
+        flexDirection: "row",
+        flexWrap: "wrap",
     },
     mediumButton: {
         alignItems: "center",
