@@ -24,9 +24,6 @@ export default function MoviesPopular({title, poster_path, link, preview, releas
         <View>    
             <Card style={Styles.modalCard}>   
                 <Card.Cover style={Styles.modalCardCover} source={{ uri: imagePath + poster_path }} />
-                <Card.Content>
-                    <Text style={Styles.modalCardTitle} n>{title}</Text>
-                </Card.Content>
                 <Card.Actions style={Styles.modalCardActions}>
                     <Modal
                         animationType="slide"
@@ -41,6 +38,7 @@ export default function MoviesPopular({title, poster_path, link, preview, releas
                         >
                         <View style={Styles.containerModal}>
                             <View style={Styles.modalViewModalAnime}>
+                            <Text style={Styles.modalCardTitle}>{title}</Text>
                                 <Text style={Styles.modalText}>{overview}</Text>
                                 <Pressable
                                     style={[Styles.buttonModalAnime, Styles.buttonCloseModalAnime]}

@@ -10,33 +10,38 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Settings from '../screens/Settings'
 import Movies from '../screens/Movies'
-import Recommend from '../screens/Recommend'
+import Favorites from '../screens/Favorites'
 
 const Tab = createBottomTabNavigator();
 
 export default function RouteTabs() {
 
   return (
-    <Tab.Navigator       
+    <Tab.Navigator    
       screenOptions={({ route }) => ({
         tabBarIcon: ({ focused, color, size }) => {
           let iconName;
 
-          if (route.name === 'Tips') {
+          if (route.name === 'Movies') {
             iconName = focused
-              ? 'planet-outline'
-              : 'planet-outline';
-          } else if (route.name === 'Bank Morty') {
-            iconName = focused ? 'wallet-outline' : 'wallet-outline';
-          }else if (route.name === 'Rick Movies') {
-            iconName = focused ? 'play-skip-forward-circle-outline' : 'play-skip-forward-circle-outline';
+              ? 'play-outline'
+              : 'play-outline';
+          } else if (route.name === 'Favorites') {
+            iconName = focused ? 'heart-outline' : 'heart-outline';
+          }else if (route.name === 'Settings') {
+            iconName = focused ? 'settings-outline' : 'settings-outline';
           }
 
           // You can return any component that you like here!
           return <Ionicons name={iconName} size={size} color={color} />;
         },
-        tabBarActiveTintColor: '#013A71',
-        tabBarInactiveTintColor: 'gray',
+        tabBarActiveTintColor: '#1ABEE2',
+        tabBarInactiveTintColor: '#A7A7A7',
+        tabBarStyle: { 
+          backgroundColor: '#1C1B1B',
+          height: 60,
+          paddingBottom: 7,
+          }
         
         
       })}
@@ -73,8 +78,8 @@ export default function RouteTabs() {
         }} 
       />
       <Tab.Screen
-        name="Recommend"
-        component={Recommend}
+        name="Favorites"
+        component={Favorites}
         options={{ headerShown: true,
           headerTitle: 'Dashboard',
           headerStyle: {

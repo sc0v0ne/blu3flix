@@ -145,7 +145,7 @@ const styles = StyleSheet.create({
     },
     modalCardCover: {
         width:230,
-        height: 300,
+        height: 350,
         padding: 0,
     },
     modalCardTitle: {

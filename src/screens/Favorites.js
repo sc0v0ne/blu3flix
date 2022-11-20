@@ -14,11 +14,11 @@ import Styles from '../styles/patternStyles/Styles'
 
 
 
-export default function Recommend() {
+export default function Favorites() {
   
   return (
     <View style={Styles.containerPattern}>
-        <Text style={Styles.textScreen}>Recommend</Text>
+        <Text style={Styles.textScreen}>Favorites</Text>
         
     </View>
   );
