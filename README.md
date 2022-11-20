@@ -126,3 +126,12 @@ import { signOut } from 'firebase/auth';
 [Modal](https://reactnative.dev/docs/modal)
 
 [useRef](https://pt-br.reactjs.org/docs/hooks-reference.html#useref)
+
+
+-----
+
+
+### API
+
+
+[apimovie](https://developers.themoviedb.org/3/getting-started/introduction)
