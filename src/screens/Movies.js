@@ -42,6 +42,7 @@ export default function Movies() {
         data={movies}
         renderItem={renderItem}
         keyExtractor={item => item.id}
+        horizontal={true}
       />
     </View>
   );

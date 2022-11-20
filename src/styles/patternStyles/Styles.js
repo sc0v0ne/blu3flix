@@ -7,6 +7,12 @@ const styles = StyleSheet.create({
         flex: 1,
         margin: 40,
     },
+    containerModal: {
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center",
+        marginTop: 22
+      },
     containerDouble:{
         flexDirection: "row",
         flexWrap: "wrap",
@@ -44,14 +50,9 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         padding: 10,
     },
-    containerModal: {
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-        marginTop: 22
-      },
+    
       
-    itemModalAnime: {
+    modalCard: {
         backgroundColor: "#97C44B",
         padding: 10,
         marginVertical: 8,
@@ -76,7 +77,7 @@ const styles = StyleSheet.create({
         shadowRadius: 4,
         elevation: 5
     },
-    buttonModalAnime: {
+    modalCardActions: {
         borderRadius: 20,
         padding: 10,
         elevation: 2
@@ -108,6 +109,14 @@ const styles = StyleSheet.create({
     },
     titleRickAnime: {
         fontSize: 32,
+    },
+    modalCardCover: {
+        backgroundColor: "#97C44B",
+        width:220,
+        height: 290,
+        padding: 10,
+        marginVertical: 8,
+        marginHorizontal: 16,
     },
     
 })

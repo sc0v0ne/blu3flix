@@ -17,21 +17,21 @@ import {
 
 export default function Item({title, poster_path, link, preview, release_date}) {
 
-    const imagePath = 'https://image.tmdb.org/t/p/w500/'
+    const imagePath = 'https://image.tmdb.org/t/p/original/'
 
     const [modalVisible, setModalVisible] = useState(false);
     return (
         <View style={Styles.containerDouble}>    
-            <Card style={Styles.itemModalAnime}>
+            <Card style={Styles.modalCard}>
 
                 <Card.Content>
                     <Text style={Styles.titleModalAnime}>{title}</Text>
                     <Text>{release_date}</Text>
                 </Card.Content>
 
-                <Card.Cover style={Styles.imageModalAnime} source={{ uri: imagePath + poster_path }} />
+                <Card.Cover style={Styles.modalCardCover} source={{ uri: imagePath + poster_path }} />
                     
-                <Card.Actions style={Styles.button_1ModalAnime}>
+                <Card.Actions style={Styles.modalCardActions}>
 
                     <Modal
                         animationType="slide"
