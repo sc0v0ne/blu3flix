@@ -19,13 +19,13 @@ export default function SignIn({navigation}) {
   
   return (
     <View style={Styles.containerPattern}>
-        <Text>Sign In</Text>
-        <Text>E-mail</Text>
+        <Text style={Styles.textScreen}>Sign In</Text>
+        <Text style={Styles.textScreen}>E-mail</Text>
         <MediumInput
 
 
         />
-        <Text>Password</Text>
+        <Text style={Styles.textScreen}>Password</Text>
         <MediumInput
 
 
@@ -33,7 +33,7 @@ export default function SignIn({navigation}) {
         <MediumButton
           buttonText = 'Acess'
           buttonPress = {() => navigation.navigate('Dashboard')}
-
+          styleMediumButton={Styles.mediumButtonBlue}
         />
     </View>
   );

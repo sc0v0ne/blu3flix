@@ -17,15 +17,22 @@ export default function Home({navigation}) {
   
   return (
     <View style={Styles.containerPattern}>
-        <Text>Home</Text>
-        <MediumButton
-          buttonText = 'Sign In'
-          buttonPress = {() => navigation.navigate('SignIn')}
-        />
-        <MediumButton
-          buttonText = 'Sign Up'
-          buttonPress = {() => navigation.navigate('SignUp')}
-        />
+        <Text style={Styles.textScreen}>Home</Text>
+        <View style={Styles.containerDoubleButton}>
+          <MediumButton
+            styleMediumButton={Styles.mediumButtonBlue}
+            styleMediumText={Styles.mediumButtonTextBlue}
+            buttonText = 'Sign In'
+            buttonPress = {() => navigation.navigate('SignIn')}
+          />
+          <MediumButton
+            styleMediumButton={Styles.mediumButtonNormal}
+            styleMediumText={Styles.mediumButtonTextNormal}
+            buttonText = 'Sign Up'
+            buttonPress = {() => navigation.navigate('SignUp')}
+            
+          />
+        </View>
     </View>
   );
 }

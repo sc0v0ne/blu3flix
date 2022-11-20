@@ -18,7 +18,7 @@ export default function Settings() {
   
   return (
     <View style={Styles.containerPattern}>
-        <Text>Settings</Text>
+        <Text style={Styles.textScreen}>Settings</Text>
         
     </View>
   );

@@ -18,8 +18,8 @@ export default function SignUp({navigation}) {
   
   return (
     <View style={Styles.containerPattern}>
-        <Text>SignUp</Text>
-        <Text>E-mail</Text>
+        <Text style={Styles.textScreen}>SignUp</Text>
+        <Text style={Styles.textScreen}>E-mail</Text>
         <MediumInput
 
 
@@ -32,7 +32,7 @@ export default function SignUp({navigation}) {
         <MediumButton
           buttonText = 'Create Account'
           buttonPress = {() => navigation.navigate('Home')}
-
+          styleMediumButton={Styles.mediumButtonBlue}
         />
     </View>
   );

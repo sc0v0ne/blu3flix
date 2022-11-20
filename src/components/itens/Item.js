@@ -21,7 +21,7 @@ export default function Item({title, poster_path, link, preview, release_date}) 
 
     const [modalVisible, setModalVisible] = useState(false);
     return (
-        <View style={Styles.containerDouble}>    
+        <View>    
             <Card style={Styles.modalCard}>
                 <Card.Content>
                     <Text style={Styles.titleModalAnime}>{title}</Text>

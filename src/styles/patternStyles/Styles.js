@@ -5,26 +5,54 @@ import { colors, fonts } from '..';
 const styles = StyleSheet.create({
     containerPattern:{
         flex: 1,
-        margin: 40,
+        padding: 20,
+        backgroundColor: colors.backgroundPattern,
+        
     },
     containerModal: {
         flex: 1,
         justifyContent: "center",
         alignItems: "center",
         marginTop: 22
-      },
-    containerDouble:{
+    },
+    containerDoubleButton: {
         flexDirection: "row",
         flexWrap: "wrap",
+        justifyContent: 'space-evenly',
+        
+    },    
+    textScreen:{
+        color: colors.fontPattern
     },
-    mediumButton: {
+    mediumButtonBlue: {
         alignItems: "center",
-        backgroundColor: "#DDD1DD",
+        backgroundColor: colors.bluePattern,
         padding: 10,
+        borderRadius: 30,
+        width: 130,
+        height: 90,
+        justifyContent: "center",
+        alignItems: "center",   
     },
-    mediumButtonText: {
-        fontSize: 10,
-        fontWeight: "bold"
+    mediumButtonNormal: {
+        alignItems: "center",
+        padding: 10,
+        borderRadius: 30,
+        width: 130,
+        height: 90,
+        justifyContent: "center",
+        alignItems: "center", 
+        
+    },
+    mediumButtonTextBlue: {
+        fontSize: 20,
+        fontWeight: "bold",
+        color: colors.buttonPatternThree
+    },
+    mediumButtonTextNormal: {
+        fontSize: 20,
+        fontWeight: "bold",
+        color: colors.buttonPatternTwo
     },
     smallButton: {
         alignItems: "center",

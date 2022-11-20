@@ -17,10 +17,10 @@ export default function MediumButton(props) {
   return (
     <View>
         <TouchableOpacity
-            style={Styles.mediumButton}
+            style = {props.styleMediumButton}
             onPress={props.buttonPress}
         >
-        <Text style={Styles.mediumButtonText}>
+        <Text style={props.styleMediumText}>
             {props.buttonText}
         </Text>
       </TouchableOpacity>

@@ -18,7 +18,7 @@ export default function Recommend() {
   
   return (
     <View style={Styles.containerPattern}>
-        <Text>Recommend</Text>
+        <Text style={Styles.textScreen}>Recommend</Text>
         
     </View>
   );
