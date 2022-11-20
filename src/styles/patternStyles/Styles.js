@@ -168,6 +168,13 @@ const styles = StyleSheet.create({
         shadowRadius: 4,
         elevation: 5
     },
+    flatListTitle: {
+        fontSize: 25,
+        fontWeight: "bold",
+        color: colors.fontPattern,
+        marginBottom: 10,
+    },
+
     
     buttonOpenModalAnime: {
         backgroundColor:"#97C44B",

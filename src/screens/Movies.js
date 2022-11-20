@@ -14,13 +14,13 @@ import Styles from '../styles/patternStyles/Styles';
 
 export default function Movies() {  
 
-  const [movies, setMovies] = useState([])
+  const [moviesPopular, setMoviesPopular] = useState([])
 
   useEffect(() => {
     fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${movieDBKeyAPI.apiKey}&language=en-US`)
     .then(response => response.json())
     .then(dataPopular => {
-      setMovies(dataPopular.results)
+      setMoviesPopular(dataPopular.results)
     })
   }, [])
 
@@ -48,14 +48,14 @@ export default function Movies() {
   return (
     <View style={Styles.containerPattern}>
       <ScrollView>
-        <Text style={Styles.inputMethodTitle}>Popular Movies</Text>
+        <Text style={Styles.flatListTitle}>Popular Movies</Text>
         <ListFlat
-          flatListData={movies}
+          flatListData={moviesPopular}
           flatListRenderItem={renderItem}
           flatListKeyExtractor={item => item.id}
           flatListHorizontal={true}
         /> 
-         <Text style={Styles.inputMethodTitle}>Popular Movies 2</Text>
+         <Text style={Styles.flatListTitle}>Top Ranted</Text>
         <ListFlat
           flatListData={moviesTopRanted}
           flatListRenderItem={renderMoviesTopRated}
