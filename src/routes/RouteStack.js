@@ -6,7 +6,8 @@ import Home from '../screens/Home';
 import SignIn from '../screens/SignIn';
 import SignUp from '../screens/SignUp';
 import Dashboard from '../screens/Dashboard';
-
+import Styles
+ from '../styles/patternStyles/Styles';
 
 const Stack = createNativeStackNavigator();
 
@@ -22,11 +23,11 @@ export default function RouteStack() {
             <Stack.Screen
                 name="SignIn"
                 component={SignIn}
-                options={{ title: 'Back',
+                options={{ title: 'BLUEFLIX',
                 headerStyle: {
-                    backgroundColor: '#97C44B',
+                    backgroundColor: '#1C1B1B',
                   },
-                  headerTintColor: '#fff',
+                  headerTintColor: '#1ABEE2',
                   headerTitleStyle: {
                     fontWeight: 'bold',
                   },
@@ -37,9 +38,9 @@ export default function RouteStack() {
             <Stack.Screen
                 name="SignUp"
                 component={SignUp}
-                options={{ title: 'Back',
+                options={{ title: 'BLUEFLIX',
                 headerStyle: {
-                    backgroundColor: '#97C44B',
+                    backgroundColor: '#1ABEE2',
                   },
                   headerTintColor: '#fff',
                   headerTitleStyle: {
@@ -52,9 +53,9 @@ export default function RouteStack() {
             <Stack.Screen
                 name="Dashboard"
                 component={Dashboard}
-                options={{ title: 'Back',
+                options={{ title: 'BLUEFLIX',
                 headerStyle: {
-                    backgroundColor: '#97C44B',
+                    backgroundColor: '#1ABEE2',
                   },
                   headerTintColor: '#fff',
                   headerTitleStyle: {

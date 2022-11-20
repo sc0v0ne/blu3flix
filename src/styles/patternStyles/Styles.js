@@ -19,8 +19,12 @@ const styles = StyleSheet.create({
     containerCentralize:{
         flex:1,
         justifyContent: 'center',
-        alignItems: "center",
-        
+        alignItems: "center",        
+    },
+    containerEvenly:{
+        flex:1,
+        justifyContent: 'space-evenly',
+        alignItems: "center",        
     },
     containerDoubleButton: {
         flexDirection: "row",
@@ -94,12 +98,43 @@ const styles = StyleSheet.create({
         fontSize: 10,
         fontWeight: "bold"
     },
-    mediumInput:{
-        height: 40,
-        margin: 12,
+    inputMethodTitle: {
+        fontSize: 30,
+        fontWeight: "bold",
+        color: colors.fontPattern,
+        marginBottom: 4,
+    },
+    inputMethodText: {
+        color: colors.textOne,
+        fontSize: 14,
+        marginBottom: 14,
+    },
+    inputMethodURL: {
+    },
+    inputMethodInput: {
+        width: 350,
+        height: 60,
+        fontSize: 14,
+        borderRadius: 30,
         borderWidth: 1,
+        paddingLeft: 20,
+        borderColor: colors.textOne,
+        color: colors.fontPattern,
+        marginBottom: 24,
+        
+    },
+    inputMethodButton: {
+        alignItems: "center",
+        backgroundColor: colors.bluePattern,
         padding: 10,
-    },   
+        borderRadius: 30,
+        width: 350,
+        height: 60,
+        justifyContent: "center",
+        alignItems: "center", 
+        marginBottom: 24, 
+    },
+
       
     modalCard: {
         backgroundColor: "#97C44B",

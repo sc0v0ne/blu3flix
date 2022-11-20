@@ -17,7 +17,7 @@ export default function MediumInput(props) {
   return (
     <View>
         <TextInput
-            style = {Styles.mediumInput}
+            style = {props.inputStyle}
             onChangeText={props.inputOnChange}
             value = {props.inputValue}
             placeholder ={props.inputPlaceholder}
