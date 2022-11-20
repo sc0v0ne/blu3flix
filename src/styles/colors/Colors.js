@@ -7,7 +7,7 @@ const colors = {
     buttonPatternThree: '#1C1B1B',
     textOne: '#565857',
     textTwo: '#1ABEE2',
-    greenButtonTwo: '#D2E054',
+    textThree: '#A7A7A7',
     greenButtonThree: '#97C44B',
     titleHome: '#12B0C9'
 

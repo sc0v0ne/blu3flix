@@ -112,13 +112,13 @@ const styles = StyleSheet.create({
     inputMethodURL: {
     },
     inputMethodInput: {
-        width: 350,
+        width: 390,
         height: 60,
         fontSize: 14,
         borderRadius: 30,
-        borderWidth: 1,
+        borderWidth: 0.2,
         paddingLeft: 20,
-        borderColor: colors.textOne,
+        borderColor: colors.fontPattern,
         color: colors.fontPattern,
         marginBottom: 24,
         
@@ -128,11 +128,11 @@ const styles = StyleSheet.create({
         backgroundColor: colors.bluePattern,
         padding: 10,
         borderRadius: 30,
-        width: 350,
+        width: 390,
         height: 60,
         justifyContent: "center",
         alignItems: "center", 
-        marginBottom: 24, 
+        marginBottom: 24,
     },
 
       

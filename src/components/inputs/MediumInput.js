@@ -22,6 +22,8 @@ export default function MediumInput(props) {
             value = {props.inputValue}
             placeholder ={props.inputPlaceholder}
             keyboardType = {props.inputKeyboard}
+            placeholderTextColor="#A7A7A7" 
+
         />
     </View>
   );

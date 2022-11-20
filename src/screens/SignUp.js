@@ -18,22 +18,31 @@ export default function SignUp({navigation}) {
   
   return (
     <View style={Styles.containerPattern}>
-        <Text style={Styles.textScreen}>SignUp</Text>
-        <Text style={Styles.textScreen}>E-mail</Text>
-        <MediumInput
+        <View style={Styles.containerEvenly}>
+          <Text style={Styles.inputMethodTitle}>Sign Up</Text>
+          <Text style={Styles.inputMethodText}>If you need any support click here</Text>
+          <View>
+            <MediumInput
+                inputStyle = {Styles.inputMethodInput}
+                inputPlaceholder= {'Enter Email'}
+                inputKeyboard = {'email-address'}
 
+            />
+            <MediumInput
+                inputStyle = {Styles.inputMethodInput}
+                inputPlaceholder= {'Password'}
+                inputKeyboard = {'default'}
+                secureTextEntry={true}
 
-        />
-        <Text>Password</Text>
-        <MediumInput
-
-          
-        />
-        <MediumButton
-          buttonText = 'Create Account'
-          buttonPress = {() => navigation.navigate('Home')}
-          styleMediumButton={Styles.mediumButtonBlue}
-        />
+            />
+          </View>
+          <MediumButton
+            buttonText = 'Create Account'
+            buttonPress = {() => navigation.navigate('Home')}
+            styleMediumButton={Styles.inputMethodButton}
+          />
+          <Text style={Styles.inputMethodText}>Do You Have An Account ? Sign In</Text>         
+        </View>
     </View>
   );
 }
