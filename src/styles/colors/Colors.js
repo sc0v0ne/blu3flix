@@ -5,8 +5,8 @@ const colors = {
     buttonPatternOne: '#1ABEE2',
     buttonPatternTwo: '#fff',
     buttonPatternThree: '#1C1B1B',
-    yellowDashboard: '#F7EA46',
-    greenButton: '#1C8D44',
+    textOne: '#565857',
+    textTwo: '#1ABEE2',
     greenButtonTwo: '#D2E054',
     greenButtonThree: '#97C44B',
     titleHome: '#12B0C9'

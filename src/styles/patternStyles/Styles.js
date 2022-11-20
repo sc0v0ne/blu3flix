@@ -8,6 +8,7 @@ const styles = StyleSheet.create({
         padding: 20,
         backgroundColor: colors.backgroundPattern,
         
+        
     },
     containerModal: {
         flex: 1,
@@ -15,34 +16,55 @@ const styles = StyleSheet.create({
         alignItems: "center",
         marginTop: 22
     },
+    containerCentralize:{
+        flex:1,
+        justifyContent: 'center',
+        alignItems: "center",
+        
+    },
     containerDoubleButton: {
         flexDirection: "row",
         flexWrap: "wrap",
         justifyContent: 'space-evenly',
-        
-    },    
+    },
+    homeLogo:{
+        color: colors.textTwo,
+        marginBottom: 24,
+        fontSize: 44,
+    },
+    homeTitle:{
+        color: colors.fontPattern,
+        marginBottom: 24,
+        fontSize: 18,
+    },
+    homeText:{
+        color: colors.textOne,
+        marginBottom: 24,
+        fontSize: 14,
+    },
     textScreen:{
-        color: colors.fontPattern
+        color: colors.fontPattern,
     },
     mediumButtonBlue: {
         alignItems: "center",
         backgroundColor: colors.bluePattern,
         padding: 10,
         borderRadius: 30,
-        width: 130,
-        height: 90,
+        width: 150,
+        height: 60,
         justifyContent: "center",
-        alignItems: "center",   
+        alignItems: "center", 
+        margin: 20,  
     },
     mediumButtonNormal: {
         alignItems: "center",
         padding: 10,
         borderRadius: 30,
-        width: 130,
-        height: 90,
+        width: 150,
+        height: 60,
         justifyContent: "center",
         alignItems: "center", 
-        
+        margin: 20,  
     },
     mediumButtonTextBlue: {
         fontSize: 20,
@@ -77,8 +99,7 @@ const styles = StyleSheet.create({
         margin: 12,
         borderWidth: 1,
         padding: 10,
-    },
-    
+    },   
       
     modalCard: {
         backgroundColor: "#97C44B",
