@@ -11,6 +11,10 @@ import Styles
 
 const Stack = createNativeStackNavigator();
 const title = 'BLUEFLIX'
+const colors = {
+  backgroundColor : '#1C1B1B',
+  textColor: '#1ABEE2',
+}
 
 export default function RouteStack() {
   return (    
@@ -29,9 +33,9 @@ export default function RouteStack() {
                 options={{ 
                   title: title,
                   headerStyle: {
-                    backgroundColor: '#1C1B1B',
+                    backgroundColor: colors.backgroundColor,
                   },
-                  headerTintColor: '#1ABEE2',
+                  headerTintColor: colors.textColor,
                   headerTitleAlign: 'center',
              }}
             /> 
@@ -41,9 +45,9 @@ export default function RouteStack() {
                 options={{ 
                   title: title,
                   headerStyle: {
-                    backgroundColor: '#1C1B1B',
+                    backgroundColor: colors.backgroundColor,
                   },
-                  headerTintColor: '#1ABEE2',
+                  headerTintColor:colors.textColor,
                   headerTitleAlign: 'center',
             }}
             />
@@ -53,9 +57,9 @@ export default function RouteStack() {
                 options={{ 
                     title: title,
                     headerStyle: {
-                      backgroundColor: '#1C1B1B',
+                      backgroundColor: colors.backgroundColor,
                     },
-                    headerTintColor: '#1ABEE2',
+                    headerTintColor: colors.textColor,
                     headerTitleAlign: 'center',                    
             }}
             />           
