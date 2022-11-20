@@ -5,7 +5,7 @@ import {
     ScrollView,
   } from 'react-native';
 
-import Itens from "../components/itens/Item";
+import MoviesPopular from "../components/itens/MoviesPopular";
 import MoviesTopRated from '../components/itens/MoviesTopRated';
 import { movieDBKeyAPI } from '../configs/MovieDBkeyAPI';
 import ListFlat from '../components/flatlist/ListFlat';
@@ -35,14 +35,26 @@ export default function Movies() {
   }, [])
 
 
-  const renderItem = ({ item }) => (
-      <Itens 
-        title={item.title} link={item.link} poster_path={item.poster_path} preview={item.preview} release_date={item.release_date}/>
+  const renderMoviesPopular = ({ item }) => (
+      <MoviesPopular 
+        title={item.title}
+        link={item.link}
+        poster_path={item.poster_path}
+        preview={item.preview}
+        release_date={item.release_date}
+        overview={item.overview}        
+      />
     );
   
   const renderMoviesTopRated = ({ item }) => (
     <MoviesTopRated 
-      title={item.title} link={item.link} poster_path={item.poster_path} preview={item.preview} release_date={item.release_date}/>
+      title={item.title}
+      link={item.link}
+      poster_path={item.poster_path}
+      preview={item.preview}
+      release_date={item.release_date}
+      overview={item.overview}  
+      />
   );
 
   return (
@@ -51,7 +63,7 @@ export default function Movies() {
         <Text style={Styles.flatListTitle}>Popular Movies</Text>
         <ListFlat
           flatListData={moviesPopular}
-          flatListRenderItem={renderItem}
+          flatListRenderItem={renderMoviesPopular }
           flatListKeyExtractor={item => item.id}
           flatListHorizontal={true}
         /> 

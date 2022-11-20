@@ -15,7 +15,7 @@ import {
 } from 'react-native-paper';
 
 
-export default function MoviesTopRated({title, poster_path, link, preview, release_date}) {
+export default function MoviesTopRated({title, poster_path, link, preview, release_date, overview}) {
 
     const imagePath = 'https://image.tmdb.org/t/p/original/'
 
@@ -41,7 +41,7 @@ export default function MoviesTopRated({title, poster_path, link, preview, relea
                         >
                         <View style={Styles.containerModal}>
                             <View style={Styles.modalViewModalAnime}>
-                                <Text style={Styles.modalText}>{preview}</Text>
+                                <Text style={Styles.modalText}>{overview}</Text>
                                 <Pressable
                                     style={[Styles.buttonModalAnime, Styles.buttonCloseModalAnime]}
                                     onPress={() => setModalVisible(!modalVisible)}
@@ -57,7 +57,7 @@ export default function MoviesTopRated({title, poster_path, link, preview, relea
                         style={[Styles.buttonModalAnime, Styles.buttonOpenModalAnime]}
                         onPress={() => setModalVisible(true)}
                         >
-                        <Text style={Styles.textStyleModalAnime}>Sinopse</Text>
+                        <Text style={Styles.textStyleModalAnime}>Overview</Text>
                     </Pressable>
                 </Card.Actions>                
             </Card>
