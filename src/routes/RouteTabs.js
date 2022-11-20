@@ -11,6 +11,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import Settings from '../screens/Settings'
 import Movies from '../screens/Movies'
 import Favorites from '../screens/Favorites'
+import Tv from '../screens/Tv'
 
 const Tab = createBottomTabNavigator();
 
@@ -26,10 +27,12 @@ export default function RouteTabs() {
             iconName = focused
               ? 'play-outline'
               : 'play-outline';
-          } else if (route.name === 'Favorites') {
+          } else if (route.name === 'Tv') {
+            iconName = focused ? 'tv-outline' : 'tv-outline';
+          }else if (route.name === 'Favorites') {
             iconName = focused ? 'heart-outline' : 'heart-outline';
           }else if (route.name === 'Settings') {
-            iconName = focused ? 'settings-outline' : 'settings-outline';
+            iconName = focused ? 'person-outline' : 'person-outline';
           }
 
           // You can return any component that you like here!
@@ -49,7 +52,38 @@ export default function RouteTabs() {
         <Tab.Screen
         name="Movies"
         component={Movies}
-        options={{ headerShown: true,
+        options={{ headerShown: false,
+          headerTitle: 'Dashboard',
+          headerStyle: {
+            backgroundColor: '#013A71',
+          },
+          headerTintColor: '#fff',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          },
+          style: { 
+            backgroundColor: '#fff',
+            shadowColor: 'transparent',
+            shadowRadius: 0,
+            shadowOffset: {
+                height: 0,
+            }
+           },
+          
+          headerRight: () => (
+            <TouchableOpacity
+              onPress={() => navigation.navigate('Home')}
+              
+            > 
+              <Text >Exit</Text>
+            </TouchableOpacity>
+          ),
+        }} 
+      />
+      <Tab.Screen
+        name="Tv"
+        component={Tv}
+        options={{ headerShown: false,
           headerTitle: 'Dashboard',
           headerStyle: {
             backgroundColor: '#013A71',
@@ -80,7 +114,7 @@ export default function RouteTabs() {
       <Tab.Screen
         name="Favorites"
         component={Favorites}
-        options={{ headerShown: true,
+        options={{ headerShown: false,
           headerTitle: 'Dashboard',
           headerStyle: {
             backgroundColor: '#013A71',
@@ -111,7 +145,7 @@ export default function RouteTabs() {
       <Tab.Screen
         name="Settings"
         component={Settings}
-        options={{ headerShown: true,
+        options={{ headerShown: false,
           headerTitle: 'Dashboard',
           headerStyle: {
             backgroundColor: '#013A71',

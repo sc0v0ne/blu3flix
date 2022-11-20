@@ -18,8 +18,7 @@ export default function Favorites() {
   
   return (
     <View style={Styles.containerPattern}>
-        <Text style={Styles.textScreen}>Favorites</Text>
-        
+        <Text style={Styles.textScreen}>Favorites</Text>        
     </View>
   );
 }

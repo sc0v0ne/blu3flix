@@ -15,7 +15,7 @@ import {
 } from 'react-native-paper';
 
 
-export default function MoviesPopular({title, poster_path, link, preview, release_date, overview}) {
+export default function TVTopRated({original_name, poster_path, link, preview, release_date, overview}) {
 
     const imagePath = 'https://image.tmdb.org/t/p/original/'
 
@@ -38,7 +38,7 @@ export default function MoviesPopular({title, poster_path, link, preview, releas
                         >
                         <View style={Styles.containerModal}>
                             <View style={Styles.modalView}>
-                            <Text style={Styles.modalCardTitle}>{title}</Text>
+                            <Text style={Styles.modalCardTitle}>{original_name}</Text>
                             <Text style={Styles.modalText}>{overview}</Text>
                             <Pressable
                                 style={Styles.modalButton}

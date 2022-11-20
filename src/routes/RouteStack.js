@@ -10,6 +10,7 @@ import Styles
  from '../styles/patternStyles/Styles';
 
 const Stack = createNativeStackNavigator();
+const title = 'BLUEFLIX'
 
 export default function RouteStack() {
   return (    
@@ -18,51 +19,44 @@ export default function RouteStack() {
             <Stack.Screen
                 name="Home"
                 component={Home}
-                options={{ headerShown: false }} 
+                options={{ 
+                  headerShown: false,
+                }} 
             />
             <Stack.Screen
                 name="SignIn"
                 component={SignIn}
-                options={{ title: 'BLUEFLIX',
-                headerStyle: {
+                options={{ 
+                  title: title,
+                  headerStyle: {
                     backgroundColor: '#1C1B1B',
                   },
                   headerTintColor: '#1ABEE2',
-                  headerTitleStyle: {
-                    fontWeight: 'bold',
-                  },
-                  headerMode: 'none',
-                cardStyle: { shadowColor: 'transparent' },
+                  headerTitleAlign: 'center',
              }}
             /> 
             <Stack.Screen
                 name="SignUp"
                 component={SignUp}
-                options={{ title: 'BLUEFLIX',
-                headerStyle: {
+                options={{ 
+                  title: title,
+                  headerStyle: {
                     backgroundColor: '#1C1B1B',
                   },
                   headerTintColor: '#1ABEE2',
-                  headerTitleStyle: {
-                    fontWeight: 'bold',
-                  },
-                  headerMode: 'none',
-                cardStyle: { shadowColor: 'transparent' },
+                  headerTitleAlign: 'center',
             }}
             />
             <Stack.Screen
                 name="Dashboard"
                 component={Dashboard}
-                options={{ title: 'BLUEFLIX',
-                headerStyle: {
-                    backgroundColor: '#1C1B1B',
-                  },
-                  headerTintColor: '#1ABEE2',
-                  headerTitleStyle: {
-                    fontWeight: 'bold',
-                  },
-                  headerMode: 'none',
-                cardStyle: { shadowColor: 'transparent' },
+                options={{ 
+                    title: title,
+                    headerStyle: {
+                      backgroundColor: '#1C1B1B',
+                    },
+                    headerTintColor: '#1ABEE2',
+                    headerTitleAlign: 'center',                    
             }}
             />           
         </Stack.Navigator>

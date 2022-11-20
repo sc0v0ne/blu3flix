@@ -20,6 +20,7 @@ export default function MoviesTopRated({title, poster_path, link, preview, relea
     const imagePath = 'https://image.tmdb.org/t/p/original/'
 
     const [modalVisible, setModalVisible] = useState(false);
+    
     return (
         <View>    
             <Card style={Styles.modalCard}>   
@@ -37,15 +38,15 @@ export default function MoviesTopRated({title, poster_path, link, preview, relea
                         }}
                         >
                         <View style={Styles.containerModal}>
-                            <View style={Styles.modalViewModalAnime}>
+                            <View style={Styles.modalView}>
                             <Text style={Styles.modalCardTitle}>{title}</Text>
-                                <Text style={Styles.modalText}>{overview}</Text>
-                                <Pressable
-                                    style={[Styles.buttonModalAnime, Styles.buttonCloseModalAnime]}
-                                    onPress={() => setModalVisible(!modalVisible)}
-                                    >
-                                    <Text style={Styles.textStyleModalAnime}>Close</Text>
-                                </Pressable>
+                            <Text style={Styles.modalText}>{overview}</Text>
+                            <Pressable
+                                style={Styles.modalButton}
+                                onPress={() => setModalVisible(!modalVisible)}
+                                >
+                                <Text style={Styles.modalTextButton}>Close</Text>
+                            </Pressable>
                             </View>
                         </View>
                     </Modal>
@@ -59,7 +60,7 @@ export default function MoviesTopRated({title, poster_path, link, preview, relea
                     </Pressable>
                 </Card.Actions>                
             </Card>
-    </View>
+        </View>
     );
 }
 
