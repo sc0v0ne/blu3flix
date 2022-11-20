@@ -133,18 +133,25 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center", 
         marginBottom: 24,
-    },
-
-      
+    },      
     modalCard: {
-        backgroundColor: "#97C44B",
-        padding: 10,
-        marginVertical: 8,
-        marginHorizontal: 16,
+        backgroundColor: colors.bluePattern,
+        padding: 0,
+        margin: 5,
+        
     },
-    titleModalAnime: {
-        fontSize: 34,
-        marginBottom: 20,
+    modalCardActions: {
+        
+    },
+    modalCardCover: {
+        width:230,
+        height: 300,
+        padding: 0,
+    },
+    modalCardTitle: {
+        fontSize: 18,
+        maxWidth:200,
+        fontWeight: "bold",
     },
     modalViewModalAnime: {
         margin: 20,
@@ -161,11 +168,7 @@ const styles = StyleSheet.create({
         shadowRadius: 4,
         elevation: 5
     },
-    modalCardActions: {
-        borderRadius: 20,
-        padding: 10,
-        elevation: 2
-    },
+    
     buttonOpenModalAnime: {
         backgroundColor:"#97C44B",
     },
@@ -194,14 +197,7 @@ const styles = StyleSheet.create({
     titleRickAnime: {
         fontSize: 32,
     },
-    modalCardCover: {
-        backgroundColor: "#97C44B",
-        width:220,
-        height: 290,
-        padding: 10,
-        marginVertical: 8,
-        marginHorizontal: 16,
-    },
+    
     
 })
 

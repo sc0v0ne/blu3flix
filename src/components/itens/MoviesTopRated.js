@@ -15,7 +15,7 @@ import {
 } from 'react-native-paper';
 
 
-export default function Item({title, poster_path, link, preview, release_date}) {
+export default function MoviesTopRated({title, poster_path, link, preview, release_date}) {
 
     const imagePath = 'https://image.tmdb.org/t/p/original/'
 
