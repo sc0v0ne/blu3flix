@@ -25,9 +25,7 @@ export default function SignIn({navigation}) {
   const handleSignIn= () => {
     signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
-      Alert.alert('Login Account!')
       const user = userCredential.user;
-      console.log(user)
       navigation.navigate('Dashboard')
     })
     .catch(error => {

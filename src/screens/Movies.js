@@ -12,6 +12,8 @@ import ListFlat from '../components/flatlist/ListFlat';
 
 import Styles from '../styles/patternStyles/Styles';
 
+'use-strict';
+
 export default function Movies() {  
 
   const [moviesPopular, setMoviesPopular] = useState([])
@@ -61,19 +63,23 @@ export default function Movies() {
     <View style={Styles.containerPattern}>
       <ScrollView>
         <Text style={Styles.flatListTitle}>Popular Movies</Text>
+        <View>
         <ListFlat
           flatListData={moviesPopular}
           flatListRenderItem={renderMoviesPopular }
           flatListKeyExtractor={item => item.id}
           flatListHorizontal={true}
-        /> 
-         <Text style={Styles.flatListTitle}>Top Ranted</Text>
-        <ListFlat
-          flatListData={moviesTopRanted}
-          flatListRenderItem={renderMoviesTopRated}
-          flatListKeyExtractor={item => item.id}
-          flatListHorizontal={true}
-        /> 
+        />
+        </View> 
+        <Text style={Styles.flatListTitle}>Top Ranted</Text>
+        <View>
+          <ListFlat
+            flatListData={moviesTopRanted}
+            flatListRenderItem={renderMoviesTopRated}
+            flatListKeyExtractor={item => item.id}
+            flatListHorizontal={false}
+          /> 
+        </View>
       </ScrollView>    
     </View>
   );
