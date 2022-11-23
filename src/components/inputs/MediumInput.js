@@ -23,6 +23,7 @@ export default function MediumInput(props) {
             placeholder ={props.inputPlaceholder}
             keyboardType = {props.inputKeyboard}
             placeholderTextColor="#A7A7A7"
+            secureTextEntry={props.inputSecureTextEntry}
         />
     </View>
   );

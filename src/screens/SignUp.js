@@ -2,11 +2,7 @@ import React, { useState } from 'react';
 import {
     Text,
     View,
-    TextInput,
-    TouchableOpacity,
-    Image,
-    ScrollView,
-    Alert
+    Alert,
 
   } from 'react-native';
 
@@ -14,8 +10,32 @@ import Styles from '../styles/patternStyles/Styles'
 import MediumInput from '../components/inputs/MediumInput';
 import MediumButton from '../components/buttons/MediumButton';
 
+import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth'
+import { initializeApp } from 'firebase/app';
+import { firebaseConfig } from '../configs/FirebaseConfig';
+
 export default function SignUp({navigation}) {
-  
+
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+
+  const handleCreateAccount = () => {
+    createUserWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      Alert.alert('Create Account!')
+      const user = userCredential.user;
+      console.log(user)
+      navigation.navigate('SignIn')
+    })
+    .catch(error => {
+      Alert.alert(error.message)
+    })
+
+    }
+
   return (
     <View style={Styles.containerPattern}>
         <View style={Styles.containerEvenly}>
@@ -26,19 +46,20 @@ export default function SignUp({navigation}) {
                 inputStyle = {Styles.inputMethodInput}
                 inputPlaceholder= {'Enter Email'}
                 inputKeyboard = {'email-address'}
+                inputOnChange={(text) => setEmail(text)}
 
             />
             <MediumInput
                 inputStyle = {Styles.inputMethodInput}
                 inputPlaceholder= {'Password'}
                 inputKeyboard = {'default'}
-                secureTextEntry={true}
-
+                inputSecureTextEntry={true}
+                inputOnChange={(text) => setPassword(text)}
             />
           </View>
           <MediumButton
             buttonText = 'Create Account'
-            buttonPress = {() => navigation.navigate('Home')}
+            buttonPress = {handleCreateAccount}
             styleMediumButton={Styles.inputMethodButton}
             styleMediumText={Styles.mediumButtonTextNormal}
           />
