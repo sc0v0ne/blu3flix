@@ -24,7 +24,7 @@ export default function Settings({navigation}) {
     <View style={Styles.containerPattern}>
         <Text style={Styles.textScreen}>Settings</Text>
         <MediumButton
-            buttonText = 'Log out'
+            buttonText = 'Logout'
             buttonPress = {() => {logout()}}
             styleMediumButton={Styles.inputMethodButton}
             styleMediumText={Styles.mediumButtonTextNormal}

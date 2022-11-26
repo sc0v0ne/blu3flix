@@ -61,8 +61,7 @@ export default function RouteStack() {
                       backgroundColor: colors.backgroundColor,
                     },
                     headerTintColor: colors.textColor,
-                    headerTitleAlign: 'center',
-                    
+                    headerTitleAlign: 'center',                    
             }}
             />           
         </Stack.Navigator>
