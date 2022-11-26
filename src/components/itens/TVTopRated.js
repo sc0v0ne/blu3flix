@@ -23,7 +23,7 @@ export default function TVTopRated({original_name, poster_path, link, preview, r
     return (
         <View>    
             <Card style={Styles.modalCard}>   
-                <Card.Cover style={Styles.modalCardCover} source={{ uri: imagePath + poster_path }} />
+                <Card.Cover style={Styles.modalCardCoverPortrait} source={{ uri: imagePath + poster_path }} />
                 <Card.Actions style={Styles.modalCardActions}>
                     <Modal
                         animationType="slide"

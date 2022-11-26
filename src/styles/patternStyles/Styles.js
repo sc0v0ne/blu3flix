@@ -143,7 +143,7 @@ const styles = StyleSheet.create({
     modalCardActions: {
         
     },
-    modalCardCover: {
+    modalCardCoverPortrait: {
         width:230,
         height: 350,
         padding: 0,

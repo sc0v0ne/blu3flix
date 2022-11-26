@@ -6,17 +6,24 @@ import {
   } from 'react-native';
 
 import Styles from '../styles/patternStyles/Styles'
-
 import MediumButton from '../components/buttons/MediumButton';
 
-export default function Settings() {
+import { auth, signInWithEmailAndPassword} from 'firebase/auth'
+import { initializeApp } from 'firebase/app';
+import { firebaseConfig } from '../configs/FirebaseConfig';
+
+export default function Settings({navigation}) {
   
+
+  auth().signOut()
+  .then(() => console.log('User signed out!'));
+
   return (
     <View style={Styles.containerPattern}>
         <Text style={Styles.textScreen}>Settings</Text>
         <MediumButton
             buttonText = 'Log out'
-            buttonPress = {() => navigation.navigate('Dashboard')}
+            buttonPress = {() => navigation.navigate('Home')}
             styleMediumButton={Styles.inputMethodButton}
             styleMediumText={Styles.mediumButtonTextNormal}
         />

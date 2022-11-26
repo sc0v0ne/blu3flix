@@ -12,7 +12,7 @@ import ListFlat from '../components/flatlist/ListFlat';
 
 import Styles from '../styles/patternStyles/Styles';
 
-'use-strict';
+
 
 export default function Movies() {  
 
@@ -77,7 +77,7 @@ export default function Movies() {
             flatListData={moviesTopRanted}
             flatListRenderItem={renderMoviesTopRated}
             flatListKeyExtractor={item => item.id}
-            flatListHorizontal={false}
+            flatListHorizontal={true}
           /> 
         </View>
       </ScrollView>    

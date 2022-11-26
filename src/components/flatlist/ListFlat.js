@@ -13,6 +13,7 @@ export default function ListFlat(props) {
             renderItem={props.flatListRenderItem}
             keyExtractor={props.flatListKeyExtractor}
             horizontal={props.flatListHorizontal}
+            style={props.flatListStyle}
         />
     </View>
   );

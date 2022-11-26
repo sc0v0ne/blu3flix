@@ -16,7 +16,7 @@ import {
 
 
 export default function MoviesTopRated({title, poster_path, link, preview, release_date, overview}) {
-
+    
     const imagePath = 'https://image.tmdb.org/t/p/original/'
 
     const [modalVisible, setModalVisible] = useState(false);
@@ -24,7 +24,7 @@ export default function MoviesTopRated({title, poster_path, link, preview, relea
     return (
         <View>    
             <Card style={Styles.modalCard}>   
-                <Card.Cover style={Styles.modalCardCover} source={{ uri: imagePath + poster_path }} />
+                <Card.Cover style={Styles.modalCardCoverPortrait} source={{ uri: imagePath + poster_path }} />
                 <Card.Actions style={Styles.modalCardActions}>
                     <Modal
                         animationType="slide"

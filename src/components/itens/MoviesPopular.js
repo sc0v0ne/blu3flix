@@ -23,7 +23,7 @@ export default function MoviesPopular({title, poster_path, link, preview, releas
     return (
         <View>    
             <Card style={Styles.modalCard}>   
-                <Card.Cover style={Styles.modalCardCover} source={{ uri: imagePath + poster_path }} />
+                <Card.Cover style={Styles.modalCardCoverPortrait} source={{ uri: imagePath + poster_path }} />
                 <Card.Actions style={Styles.modalCardActions}>
                     <Modal
                         animationType="slide"
