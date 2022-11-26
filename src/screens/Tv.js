@@ -7,7 +7,7 @@ import {
 
 import TVPopular from "../components/itens/TVPopular";
 import TVTopRated from '../components/itens/MoviesTopRated';
-import { movieDBKeyAPI } from '../configs/MovieDBkeyAPI';
+import { movieDBKeyAPI } from '../config/MovieDBkeyAPI';
 import ListFlat from '../components/flatlist/ListFlat';
 
 import Styles from '../styles/patternStyles/Styles';
