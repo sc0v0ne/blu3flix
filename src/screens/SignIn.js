@@ -10,17 +10,14 @@ import Styles from '../styles/patternStyles/Styles'
 import MediumInput from '../components/inputs/MediumInput';
 import MediumButton from '../components/buttons/MediumButton';
 
-import { getAuth, signInWithEmailAndPassword, onAuthStateChanged} from 'firebase/auth'
-import { initializeApp } from 'firebase/app';
-import { firebaseConfig } from '../config/firebase';
+import { signInWithEmailAndPassword, onAuthStateChanged} from 'firebase/auth'
+import { auth } from '../config/firebase';
 
 
 export default function SignIn({navigation}) {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
-  const app = initializeApp(firebaseConfig);
-  const auth = getAuth(app);
 
   const handleSignIn= () => {
     signInWithEmailAndPassword(auth, email, password)
@@ -34,7 +31,7 @@ export default function SignIn({navigation}) {
 
     } 
     useEffect(() =>{
-        auth.onAuthStateChanged(function(user){
+          onAuthStateChanged(auth, function(user){
           if (user) {
             navigation.navigate('Dashboard', { idUser: user.uid })
           } 

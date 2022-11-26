@@ -10,17 +10,13 @@ import Styles from '../styles/patternStyles/Styles'
 import MediumInput from '../components/inputs/MediumInput';
 import MediumButton from '../components/buttons/MediumButton';
 
-import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth'
-import { initializeApp } from 'firebase/app';
-import { firebaseConfig } from '../config/firebase';
+import { createUserWithEmailAndPassword } from 'firebase/auth'
+import { auth } from '../config/firebase';
 
 export default function SignUp({navigation}) {
 
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
-
-  const app = initializeApp(firebaseConfig);
-  const auth = getAuth(app);
 
   const handleCreateAccount = () => {
     createUserWithEmailAndPassword(auth, email, password)
@@ -33,9 +29,7 @@ export default function SignUp({navigation}) {
       Alert.alert(error.message)
     })
 
-    }
-
-    
+    }    
 
   return (
     <View style={Styles.containerPattern}>
