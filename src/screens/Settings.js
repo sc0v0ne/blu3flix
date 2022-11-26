@@ -10,7 +10,7 @@ import MediumButton from '../components/buttons/MediumButton';
 
 import { auth, signInWithEmailAndPassword} from 'firebase/auth'
 import { initializeApp } from 'firebase/app';
-import { firebaseConfig } from '../configs/FirebaseConfig';
+import { firebaseConfig } from '../config/firebase';
 
 export default function Settings({navigation}) {
   
