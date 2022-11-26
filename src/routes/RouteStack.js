@@ -25,7 +25,7 @@ export default function RouteStack() {
                 component={Home}
                 options={{ 
                   headerShown: false,
-                }} 
+                }}
             />
             <Stack.Screen
                 name="SignIn"
@@ -56,11 +56,13 @@ export default function RouteStack() {
                 component={Dashboard}
                 options={{ 
                     title: title,
+                    headerLeft: null,
                     headerStyle: {
                       backgroundColor: colors.backgroundColor,
                     },
                     headerTintColor: colors.textColor,
-                    headerTitleAlign: 'center',                    
+                    headerTitleAlign: 'center',
+                    
             }}
             />           
         </Stack.Navigator>

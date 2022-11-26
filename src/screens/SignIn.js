@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
     Text,
     View,
@@ -10,7 +10,7 @@ import Styles from '../styles/patternStyles/Styles'
 import MediumInput from '../components/inputs/MediumInput';
 import MediumButton from '../components/buttons/MediumButton';
 
-import { getAuth, signInWithEmailAndPassword} from 'firebase/auth'
+import { getAuth, signInWithEmailAndPassword, onAuthStateChanged} from 'firebase/auth'
 import { initializeApp } from 'firebase/app';
 import { firebaseConfig } from '../config/firebase';
 
@@ -25,14 +25,21 @@ export default function SignIn({navigation}) {
   const handleSignIn= () => {
     signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
-      const user = userCredential.user;
-      navigation.navigate('Dashboard')
+      let user = userCredential.user;
+      navigation.navigate('Dashboard', { idUser: user.uid})
     })
     .catch(error => {
       Alert.alert(error.message)
     })
 
     } 
+    useEffect(() =>{
+        auth.onAuthStateChanged(function(user){
+          if (user) {
+            navigation.navigate('Dashboard', { idUser: user.uid })
+          } 
+        });
+    }, [])
 
   return (
     <View style={Styles.containerPattern}>        

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {  useState } from 'react';
 import {
     Text,
     View,
@@ -26,15 +26,16 @@ export default function SignUp({navigation}) {
     createUserWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
       Alert.alert('Create Account!')
-      const user = userCredential.user;
-      console.log(user)
-      navigation.navigate('SignIn')
+        let user = userCredential.user;
+      navigation.navigate('Dashboard', { idUser: user.uid})
     })
     .catch(error => {
       Alert.alert(error.message)
     })
 
     }
+
+    
 
   return (
     <View style={Styles.containerPattern}>
