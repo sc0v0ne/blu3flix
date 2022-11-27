@@ -55,13 +55,7 @@ export default function RouteStack() {
                 name="Dashboard"
                 component={Dashboard}
                 options={{ 
-                    title: title,
-                    headerLeft: null,
-                    headerStyle: {
-                      backgroundColor: colors.backgroundColor,
-                    },
-                    headerTintColor: colors.textColor,
-                    headerTitleAlign: 'center',                    
+                    headerShown: false,                
             }}
             />           
         </Stack.Navigator>

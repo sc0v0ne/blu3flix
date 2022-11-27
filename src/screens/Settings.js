@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import {
     Text,
     View,
+    SafeAreaView,
+    StatusBar,
 
   } from 'react-native';
 import { signOut } from "firebase/auth";
@@ -21,15 +23,15 @@ export default function Settings({navigation}) {
   }
 
   return (
-    <View style={Styles.containerPattern}>
-        <Text style={Styles.textScreen}>Settings</Text>
+    <SafeAreaView style={Styles.containerPattern}>
+      <StatusBar/>
         <MediumButton
             buttonText = 'Logout'
             buttonPress = {() => {logout()}}
             styleMediumButton={Styles.inputMethodButton}
             styleMediumText={Styles.mediumButtonTextNormal}
         />
-    </View>
+    </SafeAreaView>
   );
 }
 
