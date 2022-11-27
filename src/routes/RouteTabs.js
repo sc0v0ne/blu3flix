@@ -1,16 +1,9 @@
 
-import React, { useState } from 'react';
-import {
-    Text,
-    TouchableOpacity,
-
-  } from 'react-native';
-
+import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Settings from '../screens/Settings'
 import Movies from '../screens/Movies'
-import Favorites from '../screens/Favorites'
 import Tv from '../screens/Tv'
 
 const Tab = createBottomTabNavigator();
@@ -29,7 +22,7 @@ export default function RouteTabs() {
               : 'play-outline';
           } else if (route.name === 'Tv') {
             iconName = focused ? 'tv-outline' : 'tv-outline';
-          }else if (route.name === 'Favorites') {
+          }else if (route.name === 'Cam') {
             iconName = focused ? 'heart-outline' : 'heart-outline';
           }else if (route.name === 'Settings') {
             iconName = focused ? 'person-outline' : 'person-outline';
@@ -69,15 +62,6 @@ export default function RouteTabs() {
                 height: 0,
             }
            },
-          
-          headerRight: () => (
-            <TouchableOpacity
-              onPress={() => navigation.navigate('Home')}
-              
-            > 
-              <Text >Exit</Text>
-            </TouchableOpacity>
-          ),
         }} 
       />
       <Tab.Screen
@@ -100,48 +84,9 @@ export default function RouteTabs() {
                 height: 0,
             }
            },
-          
-          headerRight: () => (
-            <TouchableOpacity
-              onPress={() => navigation.navigate('Home')}
-              
-            > 
-              <Text >Exit</Text>
-            </TouchableOpacity>
-          ),
         }} 
       />
-      <Tab.Screen
-        name="Favorites"
-        component={Favorites}
-        options={{ headerShown: false,
-          headerTitle: 'Dashboard',
-          headerStyle: {
-            backgroundColor: '#013A71',
-          },
-          headerTintColor: '#fff',
-          headerTitleStyle: {
-            fontWeight: 'bold',
-          },
-          style: { 
-            backgroundColor: '#fff',
-            shadowColor: 'transparent',
-            shadowRadius: 0,
-            shadowOffset: {
-                height: 0,
-            }
-           },
-          
-          headerRight: () => (
-            <TouchableOpacity
-              onPress={() => navigation.navigate('Home')}
-              
-            > 
-              <Text >Exit</Text>
-            </TouchableOpacity>
-          ),
-        }} 
-      />
+     
       <Tab.Screen
         name="Settings"
         component={Settings}
@@ -162,15 +107,6 @@ export default function RouteTabs() {
                 height: 0,
             }
            },
-          
-          headerRight: () => (
-            <TouchableOpacity
-              onPress={() => navigation.navigate('Home')}
-              
-            > 
-              <Text >Exit</Text>
-            </TouchableOpacity>
-          ),
         }} 
       />
 
