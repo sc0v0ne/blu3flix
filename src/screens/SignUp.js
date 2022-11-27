@@ -35,7 +35,11 @@ export default function SignUp({navigation}) {
     <View style={Styles.containerPattern}>
         <View style={Styles.containerEvenly}>
           <Text style={Styles.inputMethodTitle}>Sign Up</Text>
-          <Text style={Styles.inputMethodText}>If you need any support click here</Text>
+          <Text style={Styles.inputMethodText}>If you need any support
+            <Text style={Styles.textLink}
+            > click here
+            </Text>
+          </Text>
           <View>
             <MediumInput
                 inputStyle = {Styles.inputMethodInput}
@@ -58,7 +62,13 @@ export default function SignUp({navigation}) {
             styleMediumButton={Styles.inputMethodButton}
             styleMediumText={Styles.mediumButtonTextNormal}
           />
-          <Text style={Styles.inputMethodText}>Do You Have An Account ? Sign In</Text>         
+          <Text style={Styles.inputMethodText}>Do You Have An Account ?
+            <Text 
+              style={Styles.textLink}
+              onPress={() => navigation.navigate('SignIn')}
+            > Sign In
+            </Text>
+          </Text>         
         </View>
     </View>
   );

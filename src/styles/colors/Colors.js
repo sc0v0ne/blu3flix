@@ -8,7 +8,6 @@ const colors = {
     textOne: '#565857',
     textTwo: '#1ABEE2',
     textThree: '#A7A7A7',
-    greenButtonThree: '#97C44B',
     titleHome: '#12B0C9'
 
 };

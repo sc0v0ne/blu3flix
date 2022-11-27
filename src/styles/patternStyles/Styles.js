@@ -6,8 +6,7 @@ const styles = StyleSheet.create({
     containerPattern:{
         flex: 1,
         padding: 20,
-        backgroundColor: colors.backgroundPattern,
-        
+        backgroundColor: colors.backgroundPattern,       
         
     },
     containerModal: {
@@ -45,6 +44,7 @@ const styles = StyleSheet.create({
         color: colors.textOne,
         marginBottom: 24,
         fontSize: 14,
+        textAlign: 'center',
     },
     textScreen:{
         color: colors.fontPattern,
@@ -195,29 +195,16 @@ const styles = StyleSheet.create({
         fontWeight: "bold",
         color: colors.fontPattern,
         marginBottom: 10,
-    },
-
-    
+    },   
     
     textStyleModalAnime: {
         color: "white",
         fontWeight: "bold",
         textAlign: "center"
     },
-    
-    containerRickAnime: {
-        
-    },
-    itemRickAnime: {
-        backgroundColor: "#97C44B",
-        padding: 20,
-        marginVertical: 8,
-        marginHorizontal: 16,
-    },
-    titleRickAnime: {
-        fontSize: 32,
-    },
-    
+    textLink:{
+        color: colors.bluePattern,
+    },   
     
 })
 
