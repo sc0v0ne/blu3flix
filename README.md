@@ -141,3 +141,18 @@ import { signOut } from 'firebase/auth';
 ### Carrousel
 
 [Carousel](https://github.com/meliorence/react-native-snap-carousel#layouts-and-custom-interpolations)
+
+### Project Images:
+
+
+
+![Screenshot_20221127_130732_host exp exponent](https://user-images.githubusercontent.com/56802572/235315587-a9c6daee-819e-46e6-a305-04e0be8695d4.jpg)
+![Screenshot_20221127_130719_host exp exponent](https://user-images.githubusercontent.com/56802572/235315577-7cfaa7e2-00a3-4ac2-a925-9561b1c62a6c.jpg)
+![Screenshot_20221127_130724_host exp exponent](https://user-images.githubusercontent.com/56802572/235315585-a32c2c81-ccb9-4aae-9e72-f7747930c6b6.jpg)
+![Screenshot_20221127_130736_host exp exponent](https://user-images.githubusercontent.com/56802572/235315594-f941a621-f7a5-4471-9a13-13efd84f8841.jpg)
+![Screenshot_20221127_130740_host exp exponent](https://user-images.githubusercontent.com/56802572/235315596-84922947-0963-40d9-b8cb-c80775a3f2d9.jpg)
+
+
+
+https://user-images.githubusercontent.com/56802572/235315604-3abada44-4592-4908-9497-143e85aab7d2.mp4
+
